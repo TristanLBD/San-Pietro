@@ -1,0 +1,278 @@
+/* -------------------- GLOBAL -------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap");
+:root {
+    --main-color: red;
+    --second-text-color: #90d790;
+    --second-text-color-dark: #188e18;
+    --big-font: 1.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", cursive;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* outline: blue solid; */
+}
+
+.grow {
+    transition: transform 0.7s;
+}
+
+.grow:hover {
+    transform: scale(1.025);
+}
+
+.pacifico {
+    font-family: "Pacifico", cursive;
+}
+
+ul,
+li {
+    list-style: none;
+}
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+section {
+    background-color: var(--main-color);
+    width: 100%;
+    min-height: 500px;
+    background-color: white;
+    padding-bottom: 75px;
+}
+
+section:nth-child(even) {
+    background-color: var(--main-color);
+}
+
+.section-title {
+    padding: 50px 0px;
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--second-text-color-dark);
+    font-weight: bolder;
+}
+
+section:nth-child(even) .section-title {
+    color: white;
+}
+/* -------------------- FIN GLOBAL -------------------- */
+
+/* -------------------- HEADER -------------------- */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 16px;
+    background-color: var(--main-color);
+    color: white;
+}
+header a {
+    text-decoration: none;
+    color: white;
+    padding: 7px;
+    text-transform: capitalize;
+    border-radius: 10px;
+    transition: all 0.7s;
+}
+
+header a:hover {
+    text-decoration: none;
+    color: var(--main-color);
+    background-color: white;
+}
+nav ul {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    align-items: center;
+}
+/* -------------------- FIN HEADER -------------------- */
+
+/* -------------------- Acceuil -------------------- */
+
+#acceuil {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-image: url("./img/pizza-2810589_1920.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-size: 1.5rem;
+}
+#acceuil h2 {
+    font-size: 5.5rem;
+}
+#acceuil p {
+    padding: 15px 130px;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: 200px;
+    border-radius: 50px;
+    border: 2px solid black;
+}
+/* -------------------- FIN Acceuil -------------------- */
+
+/* -------------------- Cartes -------------------- */
+
+#carte .box {
+    width: 450px;
+    height: auto;
+    border-radius: 25px;
+}
+
+#carte .box-title {
+    font-size: 2rem;
+    color: var(--second-text-color-dark);
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+#carte .box-body {
+    display: flex;
+    flex-flow: column wrap;
+
+    align-content: space-between;
+}
+
+#carte .box-line {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+#carte .box-line:hover {
+    color: var(--second-text-color);
+}
+/* -------------------- FIN Cartes -------------------- */
+
+/* -------------------- Services -------------------- */
+
+#service .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 600px;
+    border-radius: 25px;
+    margin-top: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+}
+#service .row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 50px;
+}
+
+.row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+#service img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* -------------------- FIN Services -------------------- */
+
+/* -------------------- Contact -------------------- */
+
+#contact {
+    padding: 0 20px 50px 20px;
+}
+
+#contact .box {
+    width: 100%;
+    max-width: 550px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    font-size: 1.5rem;
+}
+
+#contact .box p {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+    font-size: 1.5rem;
+    color: var(--second-text-color);
+}
+
+#contact i {
+    color: #2dcaf9;
+    font-size: 5rem;
+}
+
+/* -------------------- FIN Contact -------------------- */
+
+/* -------------------- FOOTER -------------------- */
+footer {
+    text-align: center;
+    padding: 5px 0px;
+    border-top: 2px solid black;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 1.5rem;
+}
+/* -------------------- FIN FOOTER -------------------- */
+
+@media screen and (min-width: 1024px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+        padding: 15px 30px;
+    }
+    nav ul {
+        flex-direction: row;
+    }
+
+    .container {
+        flex-direction: row;
+    }
+
+    #service .row {
+        padding: 0 100px;
+    }
+}
