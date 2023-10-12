@@ -17,14 +17,6 @@
     /* outline: blue solid; */
 }
 
-.grow {
-    transition: transform 0.7s;
-}
-
-.grow:hover {
-    transform: scale(1.025);
-}
-
 .pacifico {
     font-family: "Pacifico", cursive;
 }
@@ -35,6 +27,7 @@ li {
 }
 img,
 video {
+    position: relative;
     max-width: 100%;
     height: auto;
 }
@@ -81,7 +74,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 0px;
     padding: 24px 16px;
     background-color: var(--main-color);
     color: white;
@@ -122,24 +115,30 @@ nav ul {
     background-attachment: fixed;
     background-position: center;
     font-size: 1.5rem;
+    text-align: center;
 }
 #acceuil h2 {
     font-size: 5.5rem;
+    position: absolute;
+    bottom: 150px;
 }
-#acceuil p {
-    padding: 15px 130px;
+#acceuil a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
     background-color: var(--main-color);
     position: absolute;
-    bottom: 200px;
     border-radius: 50px;
     border: 2px solid black;
+    text-align: center;
+    bottom: 15px;
 }
 /* -------------------- FIN Acceuil -------------------- */
 
 /* -------------------- Cartes -------------------- */
 
 #carte .box {
-    width: 450px;
+    max-width: 450px;
     height: auto;
     border-radius: 25px;
 }
@@ -261,7 +260,7 @@ footer {
     header {
         flex-direction: row;
         justify-content: space-between;
-        gap: 0;
+        gap: 24px;
         padding: 15px 30px;
     }
     nav ul {
@@ -270,6 +269,17 @@ footer {
 
     .container {
         flex-direction: row;
+    }
+
+    #acceuil a {
+        padding: 15px 130px;
+        bottom: 200px;
+    }
+
+    #acceuil h2 {
+        font-size: 5.5rem;
+        position: relative;
+        top: 25px;
     }
 
     #service .row {
